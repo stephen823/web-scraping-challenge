@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Costa Rica Weather</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+
+        </div>
+    </div>
+    <!--Create Grid-->
+   <div class="container">
+
+        <!--First and only row-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-1" style="width: 1200px;; height: 550px; background-color: lightgray; margin-left: auto; margin-right: auto;">
+                    <div id="news" style="position: relative; top:1px; left:1%;">
+                        <h2>Latest Mars News</h2>
+                        <p>{{Mars_data.lastest_news_title}}</p>
+                        <p>{{Mars_data.lastest_new_paragraph}}</p>
+                    </div>
+                    <div id="featured image" style="position: relative; top:10px; left:1%;">
+                        <h2>Featured Mars Image</h2>
+                        <section id="figure">
+                            <img id="lat-image" src="{{Mars_data.featured_image_url}}" style="width:500px; height:330px;">
+                        </section>
+                    </div>
+                    <div id="mars-weather" style="position: relative; top:-380px; left:600px;">
+                        <section>
+                            <h2>Current Weather on Mars</h2>
+                            <p>{{Mars_data.Mars_weather}}</p>
+                        </section>
+                    </div>
+                    <div id="mars-fact" style="position: relative; top:-350px; left:600px;">
+                        <section>
+                            <h3>Mars Facts</h3>
+                            <div>{{Mars_data.html_table | safe}}</div>    
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-3" style=" margin-left: 100px; margin-right: auto; margin-top: 70px; background-color: lightgray; height: 900px; width:1000px;">
+                    <h4 style="text-align: center; font-size:x-large;">Mars Hemispheres</h2>
+                    <section id="images" style="border: 0.5ch; border-style:groove;">
+                        <section id="figure">
+                            <div id="camp1" style="position: absolute; left: 170px; top: 140px; border: 0.5ch; border-style:groove;">
+                                <img id="h_image1" src="{{Mars_data.Mars_img_url1}}" style="width:350px; height:350px;">
+                                <figcaption>{{Mars_data.Mars_title1}}</figcaption>
+                            </div>
+                            <div id="camp2" style="position: absolute; right: 170px; top: 140px; border: 0.5ch; border-style:groove;">
+                                <img id="h_image2" src="{{Mars_data.Mars_img_url2}}" style="width:350px; height:350px;">
+                                <figcaption>{{Mars_data.Mars_title2}}</figcaption>
+                            </div>
+                            <div id="camp3" style="position: absolute; left: 170px; top: 540px; border: 0.5ch; border-style:groove;">
+                                <img id="h_image3" src="{{Mars_data.Mars_img_url3}}" style="width:350px; height:350px;">
+                                <figcaption>{{Mars_data.Mars_title3}}</figcaption>
+                            </div>
+                            <div id="camp4" style="position: absolute; right: 170px; top: 540px; border: 0.5ch; border-style:groove;">
+                                <img id="h_image4" src="{{Mars_data.Mars_img_url4}}" style="width:350px; height:350px;">
+                                <figcaption>{{Mars_data.Mars_title4}}</figcaption>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #comp1{
+            position: absolute;
+            left: 15px;
+            top: -6px;
+        }
+
+        #comp2{
+            position: absolute;
+            left: 30px;
+            top: -6px;
+        }
+    </style>
+
+
+
+
+</body>
+
+</html>
+
+
