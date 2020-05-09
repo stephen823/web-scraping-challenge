@@ -1,0 +1,128 @@
+#container-fluid{
+    margin-left: auto; 
+    margin-right: auto;
+    left: auto;
+    right: auto;
+}
+
+
+
+
+.box-1{
+    margin-left: auto; 
+    margin-right: auto;
+    left: auto;
+    right:auto;
+    height:600px;
+    top: 20px;
+    background-color:lightgray;
+    align-content: center;
+}
+
+#news{
+    position: absolute; 
+    top:1px; 
+    left:6%;
+}
+
+#featured-image{
+    position: absolute; 
+    top:170px; 
+    left:6%;
+}
+
+#lat-image{
+    width:530px; 
+    height:330px;
+}
+
+#mars-weather{
+    position: absolute; 
+    top:1px; 
+    left:60%;
+}
+
+#mars-fact{
+    position: absolute; 
+    top:160px; 
+    left:60%;
+}
+
+
+.box-3{
+    margin-left: auto; 
+    margin-right: auto;
+    left: auto;
+    right:auto;
+}
+
+#lat-image{
+    float:left
+}
+  
+
+
+.box-3{
+    width: 1100px;
+    height:200px;
+    top: 200px;
+    left: -550px;
+}
+
+#images{
+    border: 0.5ch; 
+    border-style:groove;
+}
+ 
+
+div#comp1{
+
+    position: absolute; 
+    left: 10px;  
+    top: 70px; 
+    border: 0.5ch; 
+    border-style:groove;
+    width:350px; 
+    height:370px;
+  }
+  
+div#comp2{
+    position: absolute; 
+    left: 10px;  
+    top: 70px; 
+    border: 0.5ch; 
+    border-style:groove;
+    width:350px; 
+    height:370px;
+  }
+  
+div#comp3{
+    position: absolute; 
+    left: 10px;
+    top: 470px; 
+    border: 0.5ch; 
+    border-style:groove;
+    width:350px; 
+    height:370px;
+  }
+  
+div#comp4{
+    position: absolute; 
+    right: 10px;
+    top: 470px; 
+    border: 0.5ch; 
+    border-style:groove;
+    width:350px; 
+    height:370px;
+  }
+
+
+
+#h_image1,
+#h_image2,
+#h_image3,
+#h_image4{
+    width:350px; 
+    height:350px;
+}
+
