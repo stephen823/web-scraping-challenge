@@ -25,7 +25,7 @@ def scrape_info():
 
     #Extract lastest news title
     divs_title = soup.find_all('div', class_='content_title')
-    lastest_cont=divs_title[1].find('a', target='_self')
+    lastest_cont=divs_title[1].find('a')
     lastest_news_title=lastest_cont.getText()
     
     #Extract Pragraph text
