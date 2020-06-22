@@ -6,7 +6,7 @@ import requests
 
 
 def init_browser():
-    executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
+    executable_path = {'executable_path': '/Users/apple/Downloads/chromedriver'}
     return Browser('chrome', **executable_path, headless=False)
 
 def scrape_info():
@@ -62,15 +62,20 @@ def scrape_info():
     url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(url)
    
-    
-    #Scrape Mars Weather twitter account
+
+    time.sleep(1)
+
+
     html = browser.html
-    soup = bs(html, "html.parser")
+    soup = bs(html, 'html.parser')
     
-    
-    #Scrape tweet
+
+
+
+
+#Scrape tweet
     try:
-        weather_tweet = soup.select("div[data-testid=tweet]")
+        weather_tweet = soup.find_all(attrs={'data-testid': 'tweet'})
         weather_tweet1=weather_tweet[0]
     except IndexError:
         import re
@@ -82,18 +87,13 @@ def scrape_info():
         matches=pattern.search(str(weather_tweet1))
     except:
         pass
-    matches
-    try:
-        weather=matches.group(0)
-    except:
-        import requests
-        html=requests.get(url).text
-        pattern=re.compile(r"InSight sol \d*\s\(.*?\)\slow\s.*?ºC\s\(.*?\)\shigh\s.*?ºC\s\(.*?\)\nwinds\s\D*\d*.\d*\s.{3}\s\(.*?mph\)\s.*\(.*?mph\)\npressure.*hPa")
-        matches=pattern.search(str(html))
+    print(matches)
     weather=matches.group(0)
+    print(matches)        
     weather1=weather.split('\n')
     tweet=weather1[0]+weather1[1]+weather1[2]
     tweet
+
 
     #Extract information within paratises and recompile phrases
     import re
@@ -111,7 +111,7 @@ def scrape_info():
     from datetime import datetime
     import calendar
     date=pd.to_datetime(Date1)
-    date
+    print(date)
 
     date_element=date.date
     month=date.month
